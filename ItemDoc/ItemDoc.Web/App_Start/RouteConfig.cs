@@ -12,12 +12,15 @@ namespace ItemDoc.Web
     public static void RegisterRoutes(RouteCollection routes)
     {
       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+      //安装模块
       routes.MapRoute(
           name: "Default",
           url: "{controller}/{action}/{id}",
-          defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+          defaults: new { controller = "Install", action = "Index", id = UrlParameter.Optional }
       );
+
+
+
     }
   }
 }

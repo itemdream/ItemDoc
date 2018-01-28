@@ -1,0 +1,6 @@
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\bin\Debug\ItemDoc.Services.dll
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\bin\Debug\ItemDoc.Services.pdb
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\obj\Debug\ItemDoc.Services.csproj.CoreCompileInputs.cache
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\obj\Debug\ItemDoc.Services.dll
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\obj\Debug\ItemDoc.Services.pdb
+E:\GitCode\ItemDoc\ItemDoc\ItemDoc.Services\obj\Debug\ItemDoc.Services.csprojResolveAssemblyReference.cache

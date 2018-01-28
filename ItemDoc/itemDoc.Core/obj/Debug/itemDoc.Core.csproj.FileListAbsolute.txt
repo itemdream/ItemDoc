@@ -1,0 +1,6 @@
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\bin\Debug\itemDoc.Core.dll
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\bin\Debug\itemDoc.Core.pdb
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\obj\Debug\itemDoc.Core.csprojResolveAssemblyReference.cache
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\obj\Debug\itemDoc.Core.csproj.CoreCompileInputs.cache
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\obj\Debug\itemDoc.Core.dll
+E:\GitCode\ItemDoc\ItemDoc\itemDoc.Core\obj\Debug\itemDoc.Core.pdb

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d3254f9b-243f-46f7-a96e-abe731089342</ProjectGuid>
+    <ProjectGuid>{D3254F9B-243F-46F7-A96E-ABE731089342}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ItemDoc.Framework</RootNamespace>
@@ -30,24 +30,99 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Autofac, Version=4.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.2.6\lib\net46\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc.resources">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\zh-Hans\System.Web.Mvc.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Caching\CacheExtensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\MemoryCacheManager.cs" />
+    <Compile Include="Caching\RedisCacheManager.cs" />
+    <Compile Include="Caching\WebCacheManager.cs" />
+    <Compile Include="Configuration\ConfigurationUtility.cs" />
+    <Compile Include="Imaging\ConvertHelper.cs" />
+    <Compile Include="Imaging\GIF\AnimatedGifEncoder.cs" />
+    <Compile Include="Imaging\GIF\GifDecoder.cs" />
+    <Compile Include="Imaging\GIF\LzwDecoder.cs" />
+    <Compile Include="Imaging\GIF\LzwEncoder.cs" />
+    <Compile Include="Imaging\GIF\NeuQuant.cs" />
+    <Compile Include="Imaging\ImageHelper.cs" />
+    <Compile Include="Repositories\PetaPoco\PetaPoco.cs" />
+    <Compile Include="Repositories\BaseEntity.cs" />
+    <Compile Include="Repositories\IPageList.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\PageLinqExtensions.cs" />
+    <Compile Include="Repositories\PageList.cs" />
+    <Compile Include="Repositories\PetaPoco\PocoRepository.cs" />
+    <Compile Include="Repositories\SopTableName.cs" />
+    <Compile Include="Utility\LinqUtility.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="Environment\Config.cs" />
+    <Compile Include="Environment\DiContainer.cs" />
+    <Compile Include="Environment\RunningEnvironment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemLog\Log4NetLogger.cs" />
+    <Compile Include="SystemLog\LogLevel.cs" />
+    <Compile Include="Utilities\EncryptionUtility.cs" />
+    <Compile Include="Utilities\FileUtility.cs" />
+    <Compile Include="Utilities\HtmlUtility.cs" />
+    <Compile Include="Utilities\HttpCollects.cs" />
+    <Compile Include="Utilities\StringUtility.cs" />
+    <Compile Include="Utilities\TrustedHtml.cs" />
+    <Compile Include="Utilities\ValueUtility.cs" />
+    <Compile Include="Utilities\WebUtility.cs" />
+    <Compile Include="Utility\ChineseConverter.cs" />
+    <Compile Include="Utility\RegexUtility.cs" />
+    <Compile Include="Utility\StringUtility.cs" />
+    <Compile Include="Utility\EnumDefine.cs" />
+    <Compile Include="Validation\Captcha.cs" />
+    <Compile Include="Validation\Validate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imaging\GIF\Readme.txt" />
+    <Content Include="Utilities\WebUtilityBBCodeToHtml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
